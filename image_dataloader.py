@@ -36,7 +36,7 @@ class GestureSequenceDataset(Dataset):
 
         images = []
         for img_path in image_paths:
-            image = Image.open(img_path).convert("L")  # Convert to grayscale (use "RGB" if needed)
+            image = Image.open(img_path).convert("RGB")  # Convert to grayscale (use "RGB" if needed)
             if self.transform:
                 image = self.transform(image)
             images.append(image)
